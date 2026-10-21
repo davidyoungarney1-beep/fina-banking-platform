@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102f28"><title>FINA | Account Activation</title><link rel="stylesheet" href="activation.css">
+</head><body>
+<header><a class="brand" href="dashboard.html"><span class="mark">F</span> FINA</a><a class="back" href="dashboard.html">Back to wallet</a></header>
+<main>
+<section class="intro"><p class="eyebrow">ACCOUNT SERVICES</p><h1>Account activation</h1><p>Review the fee and payment details carefully before making a transfer.</p></section>
+<section class="panel fee"><p class="muted">Activation fee</p><div class="amount">₦3,000</div><h2>What this fee covers</h2><p>The stated fee is for account activation and access to eligible FINA platform features as they become available. It does not guarantee a cash balance, a withdrawal, or access to services that have not launched.</p></section>
+<section class="panel"><div class="section-title"><span class="step">1</span><div><h2>Transfer using OPay</h2><p>Confirm the recipient details in your banking app before sending.</p></div></div>
+<div class="account-row"><span>Bank</span><strong>OPay</strong></div><div class="account-row"><span>Account name</span><strong>DAVID YOUNG</strong></div><div class="account-row"><span>Account number</span><strong class="account-number">9047782027 <button type="button" id="copyAccount" class="copy">Copy</button></strong></div><div class="account-row"><span>Amount</span><strong>₦3,000</strong></div>
+<p class="warning">Only transfer if you understand the fee and the service being offered. Keep your transaction receipt. Never share your PIN, password, or OTP.</p></section>
+<section class="panel"><div class="section-title"><span class="step">2</span><div><h2>Upload payment proof</h2><p>Choose a receipt image or PDF and enter the transfer reference.</p></div></div>
+<form id="proofForm"><label for="paymentReference">Transaction reference</label><input id="paymentReference" name="paymentReference" maxlength="120" autocomplete="off" placeholder="Enter your OPay transfer reference" required><label for="proofFile">Payment proof (image or PDF)</label><input id="proofFile" name="proofFile" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required><p class="file-note" id="fileNote">Accepted: JPG, PNG, WebP or PDF. Maximum 5 MB.</p><div id="proofPreview" class="preview" hidden></div><label class="confirm"><input type="checkbox" id="confirmTransfer" required><span>I have made this transfer and the details above are correct.</span></label><button class="primary" type="submit">Submit proof for review</button><p id="formMessage" class="message" role="status" aria-live="polite"></p></form>
+</section>
+<section class="notice"><strong>Submission status</strong><p>This repository currently has no connected payment-proof storage or secure admin approval service. This page is a prototype: choosing a file does not upload it, and submitting the form will not send or store your proof or activate an account. Do not use this page to submit real payment receipts until the backend is deployed and verified.</p></section>
+</main><script src="activation.js"></script></body></html>
