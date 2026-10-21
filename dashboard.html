@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102f28">
+<title>FINA | Wallet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">F</span> FINA</a><span class="demo-tag">DEMO WALLET</span></header>
+<main class="layout">
+<section class="welcome"><div><p class="eyebrow">YOUR FINANCIAL SPACE</p><h1>Welcome to your wallet.</h1><p class="muted">A clear view of your balance, account status and activity.</p></div><div class="avatar">F</div></section>
+<section class="balance-card">
+<div class="balance-top"><span>Displayed wallet balance</span><span class="status-dot">● Demo</span></div>
+<div class="balance-amount" id="balance">₦30,000.00</div>
+<p class="balance-note">Illustrative promotional credit — not verified cash or a live account balance.</p>
+<div class="balance-actions"><button class="button button-light" id="withdrawBtn">Withdraw</button><button class="button button-outline" id="activateBtn">Activate account</button></div>
+</section>
+<section class="activation-card"><div class="activation-icon">✦</div><div class="activation-copy"><h2>Activate your account</h2><p>Enter your activation code to demonstrate the activation flow. This prototype does not accept payment or validate real codes.</p><div class="code-row"><input id="activationCode" type="text" placeholder="Enter activation code" aria-label="Activation code" maxlength="64"><button class="button button-dark" id="redeemBtn">Submit code</button></div><small>Any code entered here is for demonstration only. Do not pay or share financial credentials on this demo.</small></div></section>
+<section class="quick-section"><div class="section-heading"><h2>Services</h2><span>Preview</span></div><div class="service-grid">
+<button class="service-tile" data-service="Airtime"><span class="service-icon">A</span><strong>Airtime</strong><small>Coming soon</small></button>
+<button class="service-tile" data-service="Data"><span class="service-icon">D</span><strong>Data</strong><small>Coming soon</small></button>
+<button class="service-tile" data-service="Betting"><span class="service-icon">B</span><strong>Betting</strong><small>Coming soon</small></button>
+<button class="service-tile" data-service="Transactions"><span class="service-icon">↗</span><strong>Transactions</strong><small>View activity</small></button>
+</div></section>
+<section class="activity-card"><div class="section-heading"><h2>Recent activity</h2><span>Demo entries</span></div><div id="activityList" class="activity-list"><div class="empty-state">No demo activity yet. Actions you try here may appear in this list.</div></div></section>
+<section class="notice"><strong>Important</strong><p>This is a visual prototype only. It does not create an account, credit actual funds, process activation fees, submit a real withdrawal, or connect to airtime, data or betting providers. A real withdrawable bonus must be funded and its eligibility, fees and withdrawal rules clearly disclosed before a user pays.</p></section>
+</main>
+<nav class="bottom-nav"><a href="index.html">Home</a><a class="active" href="dashboard.html">Wallet</a><a href="#activityList" id="activityLink">Activity</a></nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="withdrawModal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="withdrawTitle"><button class="close-modal" id="closeModal" aria-label="Close">×</button><p class="eyebrow">WALLET SERVICE</p><h2 id="withdrawTitle">Request a withdrawal</h2><p class="muted">This form is a demo only. No withdrawal will be sent or processed.</p><form id="withdrawForm"><label for="withdrawAmount">Amount (₦)</label><input id="withdrawAmount" type="number" min="500" step="1" placeholder="e.g. 5000" required><label for="bankName">Bank name</label><input id="bankName" placeholder="Enter bank name" required><label for="accountName">Account name</label><input id="accountName" placeholder="Enter account name" required><label for="accountNumber">Account number</label><input id="accountNumber" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit account number" required><p class="form-note">Do not enter real bank details in this prototype.</p><button class="button button-dark full" type="submit">Preview withdrawal request</button></form></section></div>
+<script src="dashboard.js"></script>
+</body></html>
