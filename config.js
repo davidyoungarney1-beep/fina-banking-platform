@@ -1,0 +1,2 @@
+/* FINA frontend configuration. Set API_BASE_URL to your deployed backend origin before launch. Keep secrets and private API keys on the server. */
+window.FINA_CONFIG = window.FINA_CONFIG || { API_BASE_URL: "" };
