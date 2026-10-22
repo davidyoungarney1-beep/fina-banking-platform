@@ -1,1 +1,38 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#083d2e"><title>FINA | Account Activation</title><link rel="stylesheet" href="activation.css"></head><body><header><a class="brand" href="dashboard.html"><span class="mark">F</span> FINA</a><a class="back" href="dashboard.html">Back to wallet</a></header><main><section class="intro"><p class="eyebrow">ACCOUNT SERVICES</p><h1>Account activation</h1><p>Review the activation fee and official payment instructions before proceeding.</p></section><section class="panel fee"><p class="muted">Activation fee</p><div class="amount">₦3,000</div><h2>What this fee covers</h2><p>The stated fee is for account activation and access to eligible FINA platform features. Review the applicable terms and confirm what is included before making a payment. Activation does not itself guarantee a cash balance or withdrawal.</p></section><section class="panel"><div class="section-title"><span class="step">1</span><div><h2>Official payment instructions</h2><p>Payment details must be supplied and verified by the FINA backend.</p></div></div><div id="paymentInstructions" class="payment-instructions"><p>Payment instructions are not available yet because the FINA backend is not connected. Do not transfer money to account details from an unverified message or screenshot.</p></div><p class="warning">Never share your PIN, password or one-time verification code. Keep your payment receipt.</p></section><section class="panel"><div class="section-title"><span class="step">2</span><div><h2>Submit payment reference</h2><p>After payment instructions are verified and you have made the transfer, submit the reference for review.</p></div></div><form id="proofForm"><label for="paymentReference">Transaction reference</label><input id="paymentReference" name="paymentReference" maxlength="120" autocomplete="off" placeholder="Enter transaction reference" required><label for="proofFile">Payment receipt (image or PDF)</label><input id="proofFile" name="proofFile" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required><p class="file-note">Accepted: JPG, PNG, WebP or PDF. Maximum 5 MB.</p><label class="confirm"><input type="checkbox" id="confirmTransfer" required><span>I have completed the transfer using the verified payment instructions.</span></label><button class="primary" type="submit">Submit for review</button><p id="formMessage" class="message" role="status" aria-live="polite"></p></form></section><section class="notice"><strong>Activation status</strong><p>Your account is not activated by this page alone. The server must securely receive the payment reference and receipt, verify the payment, and confirm the account status.</p></section></main><script src="config.js"></script><script src="activation.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#083d2e">
+<title>FINA | Account Activation</title><link rel="stylesheet" href="activation.css">
+</head>
+<body>
+<header><a class="brand" href="dashboard.html"><span class="mark">F</span> FINA</a><a class="back" href="dashboard.html">Back to wallet</a></header>
+<main>
+<section class="intro"><p class="eyebrow">ACCOUNT SERVICES</p><h1>Activate your account</h1><p>Pay the ₦3,000 activation fee using the account details below, then upload your payment proof. Your account stays pending until an administrator verifies the payment.</p></section>
+<section class="panel fee"><p class="muted">One-time activation fee</p><div class="amount">₦3,000</div><p>Activation enables access to eligible FINA platform features. Payment does not guarantee a cash bonus or withdrawal.</p></section>
+<section class="panel">
+<div class="section-title"><span class="step">1</span><div><h2>Pay to this FINA account</h2><p>Use these payment details for the ₦3,000 activation fee.</p></div></div>
+<div class="payment-card">
+<div class="payment-row"><span>Payment provider</span><strong>OPay</strong></div>
+<div class="payment-row"><span>Account name</span><strong>DAVID YOUNG</strong></div>
+<div class="payment-row"><span>Account number</span><strong class="account-number">9047782027 <button type="button" class="copy-btn" id="copyAccount">Copy</button></strong></div>
+<div class="payment-row"><span>Amount</span><strong>₦3,000</strong></div>
+<p class="payment-note">Confirm the recipient name and account number in your payment app before sending. Keep your transaction receipt.</p>
+</div>
+</section>
+<section class="panel">
+<div class="section-title"><span class="step">2</span><div><h2>Upload proof of payment</h2><p>Submit your transaction reference and receipt for admin verification.</p></div></div>
+<form id="proofForm">
+<label for="paymentReference">Transaction reference</label><input id="paymentReference" name="paymentReference" maxlength="120" autocomplete="off" placeholder="Enter transaction reference" required>
+<label for="proofFile">Payment receipt (image or PDF)</label><input id="proofFile" name="proofFile" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required>
+<p class="file-note">Accepted: JPG, PNG, WebP or PDF. Maximum file size: 5 MB.</p>
+<label class="confirm"><input type="checkbox" id="confirmTransfer" required><span>I have completed the ₦3,000 transfer to the account details shown above.</span></label>
+<button class="primary" type="submit">Submit proof for review</button><p id="formMessage" class="message" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section class="notice"><strong>What happens next?</strong><p>Your proof is sent to the FINA backend for review. An administrator must verify the transaction and approve the request before your activation status changes. This page does not activate your account by itself.</p></section>
+</main>
+<script src="config.js"></script><script src="activation.js"></script>
+<script>
+document.getElementById('copyAccount')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText('9047782027');document.getElementById('copyAccount').textContent='Copied';}catch{document.getElementById('copyAccount').textContent='Copy manually';}});
+</script>
+</body></html>
