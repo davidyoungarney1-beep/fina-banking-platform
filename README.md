@@ -4,12 +4,12 @@ FINA is a mobile-friendly banking-style web prototype. This private repository c
 
 ## Current status
 - `index.html`, `style.css`, `app.js`: landing-page prototype.
-- `dashboard.html`, `dashboard.css`, `dashboard.js`: wallet dashboard and local-only demo interactions.
+- `dashboard.html`, `dashboard.css`, `dashboard.js`: wallet dashboard and local-only preview interactions.
 - `backend/`: initial API scaffold; it does not move money or store real accounts yet.
 - `docs/PRODUCT_REQUIREMENTS.md`: planned features and safeguards.
 
 ## Run the frontend locally
-Open `index.html` in a browser, or serve the repository root with any static web server. The wallet page is `dashboard.html`. Current forms and withdrawal actions are demos only; they do not create real accounts, submit bank details, or transfer money.
+Open `index.html` in a browser, or serve the repository root with any static web server. The wallet page is `dashboard.html`. Current forms and withdrawal actions run in preview mode only; they do not create real accounts, submit bank details, or transfer money.
 
 ## Run the backend scaffold
 ```bash
