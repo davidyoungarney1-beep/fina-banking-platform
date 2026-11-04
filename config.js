@@ -1,2 +1,2 @@
-/* FINA frontend settings. Preview data is local to this browser only. Set DEMO_MODE false when the real backend is ready. */
+/* FreeCash Pay frontend settings. Preview data is local to this browser only. Set DEMO_MODE false when the real backend is ready. */
 window.FINA_CONFIG = window.FINA_CONFIG || { API_BASE_URL: "", DEMO_MODE: true };

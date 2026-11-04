@@ -1,4 +1,4 @@
-# FINA activation payment review — backend contract
+# FreeCash Pay activation payment review — backend contract
 
 The public activation page is `activation.html`. It displays the user's provided payment details (OPay, account name DAVID YOUNG, account number 9047782027) and submits the transaction reference plus receipt file.
 

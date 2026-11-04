@@ -1,4 +1,4 @@
-# FINA — Product Requirements (working draft)
+# FreeCash Pay — Product Requirements (working draft)
 
 ## Product goal
 Build a responsive banking-style interface with secure user accounts, a wallet ledger, withdrawal requests, activity history, and optional third-party service integrations.

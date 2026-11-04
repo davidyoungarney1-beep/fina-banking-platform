@@ -1,4 +1,4 @@
-/* FINA unified navy + electric-blue design system */
+/* FreeCash Pay unified navy + electric-blue design system */
 :root{--fina-navy:#071b49;--fina-blue:#155be8;--fina-sky:#168ef7;--fina-pale:#f2f7ff;--fina-ink:#10234c;--fina-muted:#8290a7;--fina-line:#e1eaf6;--fina-green:#0cb879;--forest:#071b49;--green:#155be8;--mint:#eaf3ff;--ink:#10234c;--muted:#8290a7;--line:#e1eaf6;--paper:#f4f7fc;--navy:#071b49;--blue:#155be8;--blue2:#168ef7;--white:#fff;--pale:#f2f7ff}
 *{scrollbar-color:#9ab9ed #edf3fc}
 body{background-color:var(--fina-pale)}

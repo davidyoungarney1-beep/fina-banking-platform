@@ -1,6 +1,6 @@
-# FINA Banking Platform
+# FreeCash Pay Banking Platform
 
-FINA is a mobile-friendly banking-style web prototype. This private repository consolidates the current landing page and wallet dashboard with the planned backend foundation.
+FreeCash Pay is a mobile-friendly banking-style web prototype. This private repository consolidates the current landing page and wallet dashboard with the planned backend foundation.
 
 ## Current status
 - `index.html`, `style.css`, `app.js`: landing-page prototype.

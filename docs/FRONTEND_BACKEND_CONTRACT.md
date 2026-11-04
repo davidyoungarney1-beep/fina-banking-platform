@@ -1,4 +1,4 @@
-# FINA frontend/backend integration contract
+# FreeCash Pay frontend/backend integration contract
 
 The static frontend is prepared for a backend, but it is not a live financial service until the backend is deployed, tested, and configured.
 

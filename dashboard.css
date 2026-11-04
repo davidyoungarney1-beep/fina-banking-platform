@@ -2,7 +2,7 @@
 @import url("fina-theme.css");
 
 
-/* FINA premium wallet dashboard */
+/* FreeCash Pay premium wallet dashboard */
 :root{--forest:#071b49;--green:#155be8;--mint:#eaf2ff;--ink:#10234c;--muted:#7d8ba5;--line:#e5ecf7;--paper:#f4f7fd}
 html{scroll-behavior:smooth}body{min-height:100vh;background:radial-gradient(ellipse at 88% 2%,#dceaff 0,transparent 32%),linear-gradient(180deg,#f7f9ff 0%,#f2f6fd 100%);color:#10234c}
 .topbar{height:76px;background:#ffffffd9;border-bottom:1px solid #e3ebf8;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:sticky;top:0;z-index:15;padding-left:max(22px,calc((100% - 900px)/2));padding-right:max(22px,calc((100% - 900px)/2))}
