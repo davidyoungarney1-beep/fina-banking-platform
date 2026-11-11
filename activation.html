@@ -22,9 +22,8 @@
   const box=document.getElementById('activationCountdown');
   const note=document.getElementById('activationTimerNote');
   if(!timer||!box)return;
-  const key='fina_activation_countdown_end';
-  let end=Number(sessionStorage.getItem(key));
-  if(!end){end=Date.now()+15*60*1000;sessionStorage.setItem(key,String(end));}
+  // Start a fresh 15-minute countdown every time this page is opened.
+  const end=Date.now()+15*60*1000;
   let interval=null;
   function render(){
     const left=Math.max(0,Math.ceil((end-Date.now())/1000));
