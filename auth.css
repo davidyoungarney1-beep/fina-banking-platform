@@ -17,3 +17,13 @@ body.auth-page:has(#registerForm) {
     background-attachment: scroll;
   }
 }
+
+
+/* Show the full cash photo rather than zooming into the face. */
+body.auth-page:has(#loginForm),
+body.auth-page:has(#registerForm) {
+  background-size: auto, contain;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #102a43;
+}
