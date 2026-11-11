@@ -4,7 +4,7 @@
 Build a responsive banking-style interface with secure user accounts, a wallet ledger, withdrawal requests, activity history, and optional third-party service integrations.
 
 ## Current prototype only
-The frontend is static. The ₦30,000 promotional figure is illustrative, activation-code entry is not verified, and withdrawal actions only demonstrate the interface. No real balance, bank transfer, payment, airtime, data, or betting transaction is connected.
+The frontend is static. The ₦150,000 promotional figure is illustrative, activation-code entry is not verified, and withdrawal actions only demonstrate the interface. No real balance, bank transfer, payment, airtime, data, or betting transaction is connected.
 
 ## Planned modules
 1. Authentication: secure registration, sign-in, email/phone verification, session management, account recovery.
