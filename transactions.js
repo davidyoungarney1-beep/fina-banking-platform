@@ -23,13 +23,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       const row = document.createElement('article'); row.className = 'history-item';
       const icon = document.createElement('span'); icon.className = 'history-icon'; icon.textContent = /withdraw|debit|transfer out/i.test(type) ? '↓' : /welcome|bonus|credit|deposit|transfer in/i.test(type) ? '↑' : '↗';
       const main = document.createElement('div'); main.className = 'history-main';
-      const title = document.createElement('strong'); title.textContent = label(type.replace(/^service request\s*[—-]\s*/i, 'Service request — '));
+      const title = document.createElement('strong'); title.textContent = label(type.replace(/^service request\s*[—-]\s*/i, 'Service request — ')).replace(/\s*\(PV\)\s*/gi, ' ').replace(/\bpreview\b/gi, '').trim();
       const meta = document.createElement('small'); meta.textContent = dateLabel(dateValue(item));
-      if (pvMarked(item)) { const badge = document.createElement('span'); badge.className = 'history-pv'; badge.textContent = 'PV'; meta.append('  ', badge); }
       main.append(title, meta);
       const side = document.createElement('div'); side.className = 'history-side';
       const value = document.createElement('div'); value.className = 'history-amount'; value.textContent = (negative && amount > 0 ? '−' : amount > 0 ? '+' : '') + money(amount);
-      const state = document.createElement('small'); state.className = 'history-status ' + (/success|complete|received|approved/i.test(status) ? 'success' : /fail|declin|reject|cancel/i.test(status) ? 'failed' : ''); state.textContent = label(status);
+      const state = document.createElement('small'); state.className = 'history-status ' + (/success|complete|received|approved/i.test(status) ? 'success' : /fail|declin|reject|cancel/i.test(status) ? 'failed' : ''); state.textContent = pvMarked(item) ? 'PV' : label(status);
       side.append(value, state); row.append(icon, main, side); list.append(row);
     });
   }
