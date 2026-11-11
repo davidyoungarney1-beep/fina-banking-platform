@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071b49"><title>FreeCash Pay | Wallet</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="dashboard.css"><link rel="stylesheet" href="fina-theme.css">
+  <link rel="manifest" href="/manifest.webmanifest">
 </head>
 <body><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">F</span> FreeCash Pay</a><button class="text-button" id="logoutBtn" type="button">Sign out</button></header><main class="layout">
 <section class="welcome"><div><p class="eyebrow"><span class="eyebrow-spark">✦</span> YOUR FINANCIAL SPACE</p><h1 id="welcomeTitle">Welcome to FreeCash Pay.</h1><p class="muted">Your account overview and available services.</p></div><div class="avatar" id="userAvatar">F</div></section>
@@ -28,4 +29,5 @@
 .activation-code-link{display:inline-flex;align-items:center;margin:8px 0 14px;color:#155be8;font-size:13px;font-weight:700;text-decoration:none}.activation-code-link:hover{text-decoration:underline}
 </style><script src="config.js?v=20261111-150k"></script><script src="dashboard.js?v=20261111-150k"></script><script>
 document.addEventListener('DOMContentLoaded',()=>{const track=document.getElementById('payoutTrack'),dots=document.getElementById('payoutDots');if(!track||!dots)return;const slides=[...track.children];let current=0,timer;slides.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show sample payout slide '+(i+1));b.addEventListener('click',()=>show(i,true));dots.append(b)});function show(i,reset){current=(i+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';[...dots.children].forEach((d,n)=>{d.classList.toggle('active',n===current);d.setAttribute('aria-current',n===current?'true':'false')});if(reset)restart()}function restart(){clearInterval(timer);timer=setInterval(()=>show(current+1,false),3000)}show(0,false);restart();document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else restart()})});
-</script></body></html>
+</script>  <script src="/pwa.js" defer></script>
+</body></html>
