@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       main.append(title, meta);
       const side = document.createElement('div'); side.className = 'history-side';
       const value = document.createElement('div'); value.className = 'history-amount'; value.textContent = (negative && amount > 0 ? '−' : amount > 0 ? '+' : '') + money(amount);
-      const state = document.createElement('small'); state.className = 'history-status ' + (/success|complete|received|approved/i.test(status) ? 'success' : /fail|declin|reject|cancel/i.test(status) ? 'failed' : ''); state.textContent = pvMarked(item) ? 'PV' : label(status);
-      side.append(value, state); row.append(icon, main, side); list.append(row);
+      const state = document.createElement('small'); state.className = 'history-status ' + (/success|complete|received|approved/i.test(status) ? 'success' : /fail|declin|reject|cancel/i.test(status) ? 'failed' : ''); state.textContent = pvMarked(item) ? '' : label(status);
+      side.append(value); if (pvMarked(item)) { const badge = document.createElement('small'); badge.className = 'history-status history-pv'; badge.textContent = 'PV'; side.append(badge); } else if (state.textContent) { side.append(state); } row.append(icon, main, side); list.append(row);
     });
   }
   try {
