@@ -2,28 +2,21 @@
 @import url("fina-theme.css");
 
 
-/* Cash-photo background only on login and sign-up screens. */
+/* Cash photo is the first/top background layer on login and sign-up. */
 body.auth-page:has(#loginForm),
 body.auth-page:has(#registerForm) {
   background:
-    linear-gradient(110deg, rgba(5, 24, 35, .72), rgba(5, 24, 35, .38)),
     url("https://images.pexels.com/photos/7735790/pexels-photo-7735790.jpeg?auto=compress&cs=tinysrgb&w=1800")
-    center 38% / cover fixed no-repeat;
+      center 38% / contain fixed no-repeat,
+    linear-gradient(110deg, rgba(5, 24, 35, .72), rgba(5, 24, 35, .38));
+  background-color: #102a43;
 }
+
 @media (max-width: 820px) {
   body.auth-page:has(#loginForm),
   body.auth-page:has(#registerForm) {
-    background-position: 58% center;
-    background-attachment: scroll;
+    background-position: center center, center center;
+    background-size: contain, cover;
+    background-attachment: scroll, scroll;
   }
-}
-
-
-/* Show the full cash photo rather than zooming into the face. */
-body.auth-page:has(#loginForm),
-body.auth-page:has(#registerForm) {
-  background-size: auto, contain;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
-  background-color: #102a43;
 }
